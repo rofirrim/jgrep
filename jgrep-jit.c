@@ -199,6 +199,8 @@ static gcc_jit_function *generate_code_matchhere(gcc_jit_context *ctx, const cha
               gcc_jit_context_new_rvalue_from_int(ctx, char_type, regexp[0]));
       }
 
+      generate_return_zero(ctx, matchhere, &return_zero);
+
       gcc_jit_block_add_assignment(loop_check, /* loc */ NULL,
           gcc_jit_param_as_lvalue(param_text),
           text_plus_one);
