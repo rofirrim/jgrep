@@ -383,7 +383,7 @@ void generate_code_regexp(gcc_jit_context *ctx, const char* regexp)
         return_zero, /* loc */ NULL,
         gcc_jit_context_zero(ctx, int_type));
   }
-  gcc_jit_function_dump_to_dot(match, "match.dot");
+  // gcc_jit_function_dump_to_dot(match, "match.dot");
 
   // gcc_jit_context_dump_to_file(ctx, "generated-regex.dump", /* update-locations */ 1);
   // gcc_jit_context_set_bool_option(ctx, GCC_JIT_BOOL_OPTION_DEBUGINFO, 1);
